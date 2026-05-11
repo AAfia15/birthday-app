@@ -53,7 +53,7 @@ draw.text((country_x, country_y), country, fill="black", font=font_text)
 st.balloons()
 
 # ---------- SHOW IMAGE ----------
-st.image(image, caption=f"🎂 Birthday Surprise for {name}")
+st.image(image, caption=f"🎂 Dr. Ing. Hafiz Muhammad Tufail Shahzad Mahar ({name}) 🎉")
 
 # ---------- DOWNLOAD BUTTON ----------
 img_bytes = io.BytesIO()
