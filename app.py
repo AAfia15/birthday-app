@@ -13,8 +13,8 @@ title = "Happy Birthday TufAil"
 date = "16-05-2026"
 country = "Spain"
 
-font_title = ImageFont.load_default()
-font_text = ImageFont.load_default()
+font_title = ImageFont.truetype("Roboto-VariableFont-wdth,wght.ttf", 70)
+font_text = ImageFont.truetype("Roboto-VariableFont-wdth,wght.ttf", 45)
 
 
 margin_right = 40
