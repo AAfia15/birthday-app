@@ -1,16 +1,35 @@
 import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 import io
+import time
 
-# ---------- PAGE CONFIG ----------
+# ---------- PAGE SETUP ----------
 st.set_page_config(page_title="Birthday Surprise 🎉", page_icon="🎂", layout="centered")
 
 # ---------- GET NAME FROM URL ----------
 query_params = st.query_params
-name = query_params.get("name", "TufAil")
+name = query_params.get("name", "Tufail")
 
-# ---------- TITLE ----------
-st.title(f"🎉 Happy Birthday {name} 🎉")
+# ---------- ANIMATED MESSAGE ----------
+message = """Happy Birthday to someone truly special to me, Tufail.
+
+After years of knowing each other, you’ve become someone who holds a very special place in my heart, no matter how much we used to talk or don’t talk now.
+
+I’m really grateful for everything you’ve taught me, for always being there whenever I needed you, and for the way you’ve supported me through so much without ever making it feel ordinary.
+
+You’ve never been just an “ordinary” person to me. You’ve been someone I trusted with my whole heart.
+
+I pray this new year of your life brings you peace, happiness, success, and everything your heart has been quietly wishing for.
+
+May Allah Bless you always."""
+
+placeholder = st.empty()
+typed_text = ""
+
+for char in message:
+    typed_text += char
+    placeholder.markdown(f"## {typed_text}")
+    time.sleep(0.02)
 
 st.write("")
 
@@ -23,7 +42,7 @@ draw = ImageDraw.Draw(image)
 font_title = ImageFont.truetype("Roboto-Regular.ttf", 70)
 font_text = ImageFont.truetype("Roboto-Regular.ttf", 45)
 
-# ---------- TEXT ----------
+# ---------- TEXT ON IMAGE ----------
 title = f"Happy Birthday {name}"
 date = "16-05-2026"
 country = "Spain"
@@ -53,7 +72,7 @@ draw.text((country_x, country_y), country, fill="black", font=font_text)
 st.balloons()
 
 # ---------- SHOW IMAGE ----------
-st.image(image, caption=f"🎂 Dr. Ing. Hafiz Muhammad Tufail Shahzad Mahar 🎉")
+st.image(image, caption="🎂 Dr. Ing. Hafiz Muhammad Tufail Shahzad Mahar")
 
 # ---------- DOWNLOAD BUTTON ----------
 img_bytes = io.BytesIO()
