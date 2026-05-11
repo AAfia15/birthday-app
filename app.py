@@ -3,9 +3,9 @@ from PIL import Image, ImageDraw, ImageFont
 import io
 
 # ---------- PAGE ----------
-st.set_page_config(page_title="Birthday Surprise 🎉", page_icon="🎂")
+st.set_page_config(page_title=" Happy Birthday Tufail 🎉", page_icon="🎂")
 
-st.title("🎉 Birthday Surprise")
+st.title(" Happy Birthday Tufail🎉")
 
 # ---------- GET NAME ----------
 query_params = st.query_params
@@ -21,7 +21,7 @@ def reveal():
 st.button("🎁 Click to Reveal Message", on_click=reveal)
 
 # ---------- MESSAGE ----------
-message = """Happy Birthday to someone truly special to me, Tufail.
+message = """Happy Birthday to someone truly special to me, TufAil.
 
 After years of knowing each other, you’ve become someone who holds a very special place in my heart.
 
