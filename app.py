@@ -16,7 +16,6 @@ country = "Spain"
 font_title = ImageFont.truetype("Roboto-Regular.ttf", 70)
 font_text = ImageFont.truetype("Roboto-Regular.ttf", 45)
 
-
 margin_right = 40
 margin_top = 40
 
