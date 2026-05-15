@@ -1,17 +1,12 @@
 import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 import io
-
-# ---------- PAGE ----------
 st.set_page_config(page_title=" Happy Birthday Tufail 🎉", page_icon="🎂")
 
 st.title(" Happy Birthday Tufail🎉")
-
-# ---------- GET NAME ----------
 query_params = st.query_params
 name = query_params.get("name", "Tufail")
 
-# ---------- CLICK BUTTON ----------
 if "show_message" not in st.session_state:
     st.session_state.show_message = False
 
@@ -20,7 +15,6 @@ def reveal():
 
 st.button("🎁 Click to Reveal Message", on_click=reveal)
 
-# ---------- MESSAGE ----------
 message = """Happy Birthday to someone truly special to me, TufAil.
 
 After years of knowing each other, you’ve become someone who holds a very special place in my heart.
@@ -37,7 +31,6 @@ if st.session_state.show_message:
     st.markdown("### 💌 Your Message")
     st.info(message)
 
-# ---------- IMAGE ----------
 image = Image.open("T.jpeg")
 draw = ImageDraw.Draw(image)
 
@@ -66,7 +59,6 @@ draw.text((country_x, margin_top + 150), country, fill="black", font=font_text)
 st.balloons()
 st.image(image, caption="🎂 Dr. Ing. Hafiz Muhammad Tufail Shahzad Mahar🎉")
 
-# ---------- DOWNLOAD ----------
 img_bytes = io.BytesIO()
 image.save(img_bytes, format="PNG")
 
